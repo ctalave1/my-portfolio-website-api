@@ -9,7 +9,6 @@ router.get('/', (req: Request, res: Response) => {
 
   res.setHeader('Content-disposition', `inline; filename="${filename}"`)
   res.setHeader('Content-type', 'application/pdf');
-  res.setHeader('Access-Control-Allow-Origin', '*')
 
   stream.pipe(res);
 });

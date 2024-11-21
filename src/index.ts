@@ -10,11 +10,11 @@ const server: http.Server = http.createServer(app);
 const port: Port = process.env.PORT || 5000;
 
 app.get('/', (_req: Request, res: Response) => {
-  res.send(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV} | frontend_url: ${process.env.FE_URL} | files: ${fs.readdirSync(`${process.cwd()}`)}}`);
+  res.send(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV}`);
 });
 
 app.get('/ping', (_req: Request, res: Response) => {
   res.send('pong');
 })
 
-server.listen(port, () => console.log(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV} | frontend_url: ${process.env.FE_URL}`));
+server.listen(port, () => console.log(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV}`));

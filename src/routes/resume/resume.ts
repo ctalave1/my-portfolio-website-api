@@ -5,7 +5,7 @@ import '../../config';
 const router = Router();
 
 router.get('/', (req: Request, res: Response) => {
-  let stream = createReadStream(`${process.env.NODE_ENV === 'development' ? 'public' : 'server/public'}/pdfs/resume.pdf`);
+  let stream = createReadStream(`public/pdfs/resume.pdf`);
   let filename = encodeURIComponent('resume.pdf');
 
   res.setHeader('Content-disposition', `inline; filename="${filename}"`);

@@ -1,5 +1,5 @@
 {
   "watch": ["src"],
   "ext": "ts",
-  "exec": "concurrently \"npx tsc --watch\" \"node --no-warnings --enable-source-maps --loader ts-node/esm src/index.ts\""
+  "exec": "concurrently \"npx tsc --watch\" \"ts-node src/index.ts\""
 }

@@ -1,6 +1,5 @@
 import http from 'http';
 import { Request, Response } from 'express';
-import fs from 'fs';
 
 import app from './app';
 

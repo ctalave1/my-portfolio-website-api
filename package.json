@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && npx tsc",
+    "build": "rm -rf dist && npx tsc && mkdir dist/assets && cp -rf public/pdfs dist/assets",
     "start": "ts-node src/index.ts",
     "dev": "nodemon src/index.ts"
   },

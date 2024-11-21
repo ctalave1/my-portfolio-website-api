@@ -4,7 +4,11 @@
     {
       "src": "dist/index.js",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/**, public/**"] }
+      "config": { "includeFiles": ["dist/**"] }
+    },
+    {
+        "src": "public/**",
+        "use": "@vercel/static"
     }
   ],
   "routes": [

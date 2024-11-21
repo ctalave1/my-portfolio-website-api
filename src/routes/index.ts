@@ -1,5 +1,5 @@
-import resume from './resume/index.js';
-import mailer from './mailer/index.js';
+import resume from './resume';
+import mailer from './mailer';
 
 const routes = {
   resume,

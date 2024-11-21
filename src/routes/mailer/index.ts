@@ -1,4 +1,4 @@
-import mailer from './mailer.js';
+import mailer from './mailer';
 
 const route = {
   mailer

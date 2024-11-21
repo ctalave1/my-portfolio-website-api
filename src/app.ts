@@ -1,20 +1,22 @@
 import express, { Express } from 'express';
-import 'dotenv/config';
-import routes from './routes/index.js';
 import cors from 'cors';
+import helmet from 'helmet';
+import path from 'path';
+
+import routes from './routes/index';
+import './config';
 
 const app: Express = express();
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: process.env.FE_URL,
     optionsSuccessStatus: 200
 };
 
+app.use(helmet());
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(`/public`, express.static('public'));
 
 app.use('/mailer', routes.mailer.mailer);
 app.use('/resume', routes.resume.resume);

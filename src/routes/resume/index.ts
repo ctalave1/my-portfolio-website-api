@@ -1,4 +1,4 @@
-import resume from './resume.js';
+import resume from './resume';
 
 const route = {
   resume

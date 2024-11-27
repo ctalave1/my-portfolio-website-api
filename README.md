@@ -12,7 +12,7 @@
 
 ## Overview
 
-This is an Express REST API built using Node, Express, and TypeScript developed as a backend to my website's [frontend](https://github.com/ctalave1/my-portfolio-website-react/tree/master) that has 3 routes:
+This is an Express REST API built using Node, Express, and TypeScript developed as a backend to my website's [frontend](https://github.com/ctalave1/my-portfolio-website-react) that has 3 routes:
 
 1. A `GET` route `/resume` to serve up my current resume
 2. A `POST` route `/mailer` that takes in a contact for message from my frontend and mails it to my personal email address.

@@ -9,7 +9,7 @@ import './config';
 const app: Express = express();
 
 const corsOptions = {
-    origin: process.env.FE_URL,
+    origin: [process.env.FE_URL, process.env.FE_VERCEL_URL],
     optionsSuccessStatus: 200
 };
 

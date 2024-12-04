@@ -8,7 +8,7 @@ const app_1 = __importDefault(require("./app"));
 const server = http_1.default.createServer(app_1.default);
 const port = process.env.PORT || 5000;
 app_1.default.get('/', (_req, res) => {
-    res.send(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV}`);
+    res.send(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV} | FE_URLS: ${process.env.FE_URLS.split(',')[0]}`);
 });
 app_1.default.get('/ping', (_req, res) => {
     res.send('pong');

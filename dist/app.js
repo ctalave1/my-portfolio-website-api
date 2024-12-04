@@ -10,7 +10,7 @@ const index_1 = __importDefault(require("./routes/index"));
 require("./config");
 const app = (0, express_1.default)();
 const corsOptions = {
-    origin: process.env.FE_URL,
+    origin: [...process.env.FE_URLS.split(',')],
     optionsSuccessStatus: 200
 };
 app.use((0, helmet_1.default)());

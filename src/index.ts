@@ -9,7 +9,7 @@ const server: http.Server = http.createServer(app);
 const port: Port = process.env.PORT || 5000;
 
 app.get('/', (_req: Request, res: Response) => {
-  res.send(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV} | FE_URLS: ${process.env.FE_URLS.split(',')[0]}`);
+  res.send(`my-portfolio-website-api is running on port ${port} | env: ${process.env.NODE_ENV}`);
 });
 
 app.get('/ping', (_req: Request, res: Response) => {

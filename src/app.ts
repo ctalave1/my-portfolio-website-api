@@ -1,7 +1,6 @@
 import express, { Express } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import path from 'path';
 
 import routes from './routes/index';
 import './config';
@@ -9,7 +8,7 @@ import './config';
 const app: Express = express();
 
 const corsOptions = {
-    origin: [process.env.FE_URL, process.env.FE_VERCEL_URL],
+    origin: [...process.env.FE_URLS.split(',')],
     optionsSuccessStatus: 200
 };
 

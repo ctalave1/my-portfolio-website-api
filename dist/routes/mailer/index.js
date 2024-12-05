@@ -4,7 +4,4 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mailer_1 = __importDefault(require("./mailer"));
-const route = {
-    mailer: mailer_1.default
-};
-exports.default = route;
+exports.default = mailer_1.default;

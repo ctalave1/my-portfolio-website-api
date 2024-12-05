@@ -1,9 +1,11 @@
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
+import Mail from 'nodemailer/lib/mailer';
 import { Router, Request, Response } from 'express';
 import nodemailer from 'nodemailer';
 
-const router = Router();
+const router: Router = Router();
 
-const transporter = nodemailer.createTransport({
+const transporter: nodemailer.Transporter<SMTPTransport.SentMessageInfo, SMTPTransport.Options> = nodemailer.createTransport({
   service: 'gmail',
   host: 'smtps.gmail.com',
   port: 587,
@@ -14,7 +16,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const mailOptions = (name: string, email: string, message: string) => ({
+const mailOptions = (name: string, email: string, message: string): Mail.Options => ({
   from: process.env.MAILER_EMAIL,
   to: process.env.MAILER_TARGET,
   replyTo: email,
@@ -27,7 +29,7 @@ Email: ${email}
   `
 });
 
-const sendMail = async (req: Request) => {
+const sendMail = async (req: Request)  => {
   try {
     const { name, email, message } = req.body;
     const info = await transporter.sendMail(mailOptions(name, email, message));
